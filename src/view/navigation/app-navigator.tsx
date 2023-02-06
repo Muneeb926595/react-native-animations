@@ -8,13 +8,6 @@ import { useFlipper } from '@react-navigation/devtools';
 
 import { Colors } from '../../globals';
 import { linkingConfigs } from './deep-links'
-
-
-const WelcomeScreen = () => <Paragraph>WelcomeScreen</Paragraph>
-const LoginScreen = () => <Paragraph>LoginScreen</Paragraph>
-const HomeScreen = () => <Slider />
-const SettingScreen = () => <Paragraph>SettingScreen</Paragraph>
-
 import { navigationRef } from './navigation-utils';
 import { MainBottomTabsParamList, MainStackParamList } from './types';
 import { Paragraph, } from '../components';
@@ -28,6 +21,13 @@ import BkashPayment from '../screens/bKashPayment';
 import SwipeToDelete from '../screens/swipeToDelete';
 import WhatsappHeader from '../screens/whatsAppSearch';
 import Slider from '../screens/slider/slider';
+
+
+const WelcomeScreen = () => <Paragraph>WelcomeScreen</Paragraph>
+const LoginScreen = () => <Paragraph>LoginScreen</Paragraph>
+const HomeScreen = () => <Youtube />
+const SettingScreen = () => <Slider />
+
 
 const MainAppStack = createNativeStackNavigator<MainStackParamList>();
 const MainTabs = createBottomTabNavigator<MainBottomTabsParamList>();
@@ -98,7 +98,28 @@ const TabsNavigator = () => {
     >
       <MainTabs.Screen name="HomeScreen" component={HomeScreen} options={{ tabBarLabel: "Home" }} />
       <MainTabs.Screen
-        name="SettingsScreen"
+        name="PullToRefresh"
+        component={PullToRefresh}
+        options={{
+          tabBarLabel: "setting",
+        }}
+      />
+      <MainTabs.Screen
+        name="ProductPage"
+        component={ProductPage}
+        options={{
+          tabBarLabel: "setting",
+        }}
+      />
+      <MainTabs.Screen
+        name="WhatsappHeader"
+        component={WhatsappHeader}
+        options={{
+          tabBarLabel: "setting",
+        }}
+      />
+      <MainTabs.Screen
+        name="SettingScreen"
         component={SettingScreen}
         options={{
           tabBarLabel: "setting",

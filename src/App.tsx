@@ -1,5 +1,4 @@
 import React from 'react';
-import "./utils/ignore-warnings"
 import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { AppNavigator } from './view/navigation';

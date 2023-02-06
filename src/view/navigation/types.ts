@@ -7,5 +7,7 @@ export type MainStackParamList = {
 export type MainBottomTabsParamList = {
   HomeScreen: undefined;
   SettingsScreen: undefined;
-
+  PullToRefresh: undefined;
+  ProductPage: undefined;
+  WhatsappHeader: undefined;
 };
